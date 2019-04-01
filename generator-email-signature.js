@@ -44,6 +44,7 @@ $(document).ready(function () {
   initTemplate('twitter');
   initTemplate('facebook');
   initTemplate('instagram');
+  initTemplate('skype');
 
   $(document).on('click', '#generate-signature', function(event){
     event.preventDefault();

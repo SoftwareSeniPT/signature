@@ -9,6 +9,26 @@ function generateSignature({
 }) {
   const nonSocialComposed = nonSocial && nonSocial.length && nonSocial.map((field) => {
     switch (field.name) {
+      case 'skype':
+        return `
+          <tr>
+            <td style="padding:5px 5px 5px 0">
+              <img
+                style="display:block;width: 20px;height:20px"
+                src="https://1.bp.blogspot.com/-N1Q13JvcNX8/XKG5HNi8lwI/AAAAAAAACRo/ccXS_BfgwGguFvstFn8WPuWtPzu_51_8QCLcBGAs/s1600/iconfinder_icon-social-skype_211916.png"
+                alt="Phone" class="CToWUd" />
+            </td>
+            <td style="padding:5px 0">
+              <a
+                style="color:#19312E;text-decoration:none"
+                href="skype:${field.value}"
+                title="Skype"
+                target="_blank">
+                ${field.value}
+              </a>
+            </td>
+          </tr>
+        `;
       case 'phone':
         return `
           <tr>
@@ -151,7 +171,7 @@ function generateSignature({
     <table style="width:100%;color:#666" cellspacing="0" cellpadding="0">
       <tbody>
         <tr>
-          <td style="font-size:16px;font-weight:bold;color:#222">${name}</td>
+          <td style="font-size:16px;font-weight:bold;color:#0FA79E">${name}</td>
         </tr>
         <tr>
           <td style="padding:5px 0 8px; font-size:15px;font-weight:bold; color: #464646">${role}</td>
