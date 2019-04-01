@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SoftwareSeni Email Signature Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="./jquery.sweet-dropdown.min.css">
+  <link rel="stylesheet" href="./jquery.sweet-dropdown.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="emailSignature__container">
+    <div class="emailSignature__form">
+      <form id="form">
+        <div style="display:none">
+          <div class="emailSignature__formItem" id="email-template">
+            <div class="emailSignature__formLabel">Email</div>
+            <input type="text" placeholder="Email" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="web-template">
+            <div class="emailSignature__formLabel">Website</div>
+            <input type="text" placeholder="Website" class="emailSignature__formInput" value="http://" />
+          </div>
+          <div class="emailSignature__formItem" id="phone-template">
+            <div class="emailSignature__formLabel">Phone Number</div>
+            <input type="text" placeholder="Phone Number" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="fax-template">
+            <div class="emailSignature__formLabel">Fax</div>
+            <input type="text" placeholder="Fax" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="home-template">
+            <div class="emailSignature__formLabel">Home</div>
+            <input type="text" placeholder="Home" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="linkedin-template">
+            <div class="emailSignature__formLabel">Linkedin URL</div>
+            <input type="text" placeholder="Linkedin" class="emailSignature__formInput" value="https://www.linkedin.com/" />
+          </div>
+          <div class="emailSignature__formItem" id="twitter-template">
+            <div class="emailSignature__formLabel">Twitter Username</div>
+            <input type="text" placeholder="Twitter" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="facebook-template">
+            <div class="emailSignature__formLabel">Facebook Username</div>
+            <input type="text" placeholder="Facebook" class="emailSignature__formInput" />
+          </div>
+          <div class="emailSignature__formItem" id="instagram-template">
+            <div class="emailSignature__formLabel">Instagram Username</div>
+            <input type="text" placeholder="Instagram" class="emailSignature__formInput" />
+          </div>
+        </div>
+        <div class="emailSignature__formItem">
+          <div class="emailSignature__formLabel">Name</div>
+          <input type="text" placeholder="Name" class="emailSignature__formInput" id="field-name" />
+        </div>
+        <div class="emailSignature__formItem">
+          <div class="emailSignature__formLabel">Role</div>
+          <input type="text" placeholder="Role" class="emailSignature__formInput" id="field-role" />
+        </div>
+        <div class="emailSignature__formItem">
+          <div class="emailSignature__formLabel">Email</div>
+          <input type="text" placeholder="email@softwareseni.com" class="emailSignature__formInput" id="field-email" />
+        </div>
+        <div class="emailSignature__formItem">
+          <div class="emailSignature__formLabel">Website</div>
+          <input type="text" placeholder="Website" class="emailSignature__formInput"  id="field-web" value="http://www.softwareseni.com" />
+        </div>
+        <div class="emailSignature__formItem">
+          <div class="emailSignature__formLabel">Company Address</div>
+          <input type="text" placeholder="Website" class="emailSignature__formInput"  id="field-company-address" value="Jl. Pakuningratan No.15, Yogyakarta 55233" />
+        </div>
+        <div id="form-canvas"></div>
+        <div class="emailSignature__formItem emailSignature__formItemButton">
+          <button class="emailSignature__formButton emailSignature__formButtonAdd"
+            data-dropdown="#dropdown-dark-with-icons">Add New Fields</button>
+          <div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dark" id="dropdown-dark-with-icons">
+            <ul>
+              <li><a href="#" id="add-email">Email</a></li>
+              <li><a href="#" id="add-web">Website</a></li>
+              <li><a href="#" id="add-phone">Phone Number</a></li>
+              <li><a href="#" id="add-fax">Fax</a></li>
+              <li><a href="#" id="add-home">Home Address</a></li>
+              <li><a href="#" id="add-linkedin">Linkedin</a></li>
+              <li><a href="#" id="add-twitter">Twitter</a></li>
+              <li><a href="#" id="add-instagram">Instagram</a></li>
+              <li><a href="#" id="add-facebook">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="emailSignature__formItem emailSignature__formItemButton">
+          <button class="emailSignature__formButton" id="generate-signature">Generate Signature</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="emailSignature__container emailSignature__containerPreview">
+    <div class="emailSignature__form">
+      <div id="signature"></div>
+    </div>
+    <div class="emailSignature__signatureCopy">
+      <button class="emailSignature__formButton" data-target="signature" name="copy_pre">Copy Signature</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="./jquery.sweet-dropdown.min.js"></script>
+  <script src="./signature-generator.js"></script>
+  <script src="./generator-email-signature.js"></script>
+</body>
+
+</html>
