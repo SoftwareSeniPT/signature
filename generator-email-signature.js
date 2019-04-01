@@ -93,5 +93,6 @@ $(document).ready(function () {
     });
     $('#signature').html(html);
     $('body').addClass('show-generated-content');
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
   });
 });
