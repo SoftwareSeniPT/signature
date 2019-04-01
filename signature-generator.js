@@ -283,25 +283,25 @@ function generateSignature({
                   </td>
                   <td
                     style="width:50%;padding:8px;text-align:right;vertical-align:middle">
-                    <a style="text-decoration: none;color:transparent" href="https://www.linkedin.com/company/softwareseni?utm_source=email&utm_medium=footer" title="Linkedin" target="_blank">
+                    <a style="text-decoration: none;color:#0FA79E" href="https://www.linkedin.com/company/softwareseni?utm_source=email&utm_medium=footer" title="Linkedin" target="_blank">
                       <img
                         style="width: 20px;height:20px"
                         src="https://3.bp.blogspot.com/-TyYSCRjQYyo/XKGP7vSJEqI/AAAAAAAACQM/HRiLdx4lY_YDZ5c8Abj2saN-KDwNiJolQCLcBGAs/s1600/iconfinder_LinkedIn_194920.png"
                         alt="Linkedin" border="0" class="CToWUd">
                     </a>
-                    <a style="text-decoration: none;color:transparent" href="https://www.facebook.com/softwareseni.co.id?utm_source=email&utm_medium=footer" title="Facebook" target="_blank">
+                    <a style="text-decoration: none;color:#0FA79E" href="https://www.facebook.com/softwareseni.co.id?utm_source=email&utm_medium=footer" title="Facebook" target="_blank">
                       <img
                         style="width: 20px;height:20px"
                         src="https://1.bp.blogspot.com/-C_eLsPTlogk/XKGP69tu8lI/AAAAAAAACQE/DTBsCNF9QDkeJNIkA6al-xC_mOUKzjePQCLcBGAs/s1600/iconfinder_Facebook_194929.png"
                         alt="Facebook" border="0" class="CToWUd">
                     </a>
-                    <a style="text-decoration: none;color:transparent" href="https://www.instagram.com/softwareseni_id?utm_source=email&utm_medium=footer" title="Instagram" target="_blank">
+                    <a style="text-decoration: none;color:#0FA79E" href="https://www.instagram.com/softwareseni_id?utm_source=email&utm_medium=footer" title="Instagram" target="_blank">
                       <img
                         style="width: 20px;height:20px"
                         src="https://4.bp.blogspot.com/-tS3EcPHjsD4/XKGP7NmOa7I/AAAAAAAACQI/gs8UPupskwgsG4i3EY-V-ITGWO9UiJt-QCLcBGAs/s1600/iconfinder_38-instagram_1161953.png"
                         alt="Instagram" border="0" class="CToWUd">
                     </a>
-                    <a style="text-decoration: none;color:transparent" href="https://twitter.com/softwareseni?utm_source=email&utm_medium=footer" title="Twitter" target="_blank">
+                    <a style="text-decoration: none;color:#0FA79E" href="https://twitter.com/softwareseni?utm_source=email&utm_medium=footer" title="Twitter" target="_blank">
                       <img
                         style="width: 20px;height:20px"
                         src="https://4.bp.blogspot.com/-DVL7CpOjP9U/XKGP8LHH9ZI/AAAAAAAACQU/XFK4tTKzRbE_piOv8dyOoilgRkCHeRktgCLcBGAs/s1600/iconfinder_Twitter_194909.png"
