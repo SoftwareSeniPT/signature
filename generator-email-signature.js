@@ -74,23 +74,13 @@ $(document).ready(function () {
         value,
       }
     });
-    const socialList = ['twitter', 'facebook', 'instagram', 'linkedin'];
-    const nonSocial = data.filter((index, field) => {
-      if (!socialList.includes(field.name)) return true;
-      return false;
-    });
-    const social = data.filter((index, field) => {
-      if (socialList.includes(field.name)) return true;
-      return false;
-    });
     const html = generateSignature({
       name,
       role,
       email,
       web,
       companyAddress,
-      nonSocial: nonSocial.get(),
-      social: social.get(),
+      customField: data.get(),
     });
     $('#signature').html(html);
     $('body').addClass('show-generated-content');

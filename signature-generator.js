@@ -3,11 +3,10 @@ function generateSignature({
   role,
   email,
   web,
-  nonSocial,
-  social,
+  customField,
   companyAddress,
 }) {
-  const nonSocialComposed = nonSocial && nonSocial.length && nonSocial.map((field) => {
+  const customFieldComposed = customField && customField.length && customField.map((field) => {
     switch (field.name) {
       case 'skype':
         return `
@@ -119,48 +118,81 @@ function generateSignature({
             </td>
           </tr>
         `;
-      default:
-        return '';
-    }
-  });
-  
-  const socialComposed = social && social.length && social.map((field) => {
-    switch (field.name) {
-      case 'facebook':
-        return `
-          <a href="https://www.facebook.com/${field.value}" title="Facebook" target="_blank">
-            <img
-              style="width: 18px;height:18px"
-              src="https://1.bp.blogspot.com/-C_eLsPTlogk/XKGP69tu8lI/AAAAAAAACQE/DTBsCNF9QDkeJNIkA6al-xC_mOUKzjePQCLcBGAs/s1600/iconfinder_Facebook_194929.png"
-              alt="Facebook" border="0" class="CToWUd">
-          </a>
-        `;
       case 'twitter':
         return `
-          <a href="https://twitter.com/${field.value}" title="Twitter" target="_blank">
-            <img
-              style="width: 18px;height:18px"
-              src="https://4.bp.blogspot.com/-DVL7CpOjP9U/XKGP8LHH9ZI/AAAAAAAACQU/XFK4tTKzRbE_piOv8dyOoilgRkCHeRktgCLcBGAs/s1600/iconfinder_Twitter_194909.png"
-              alt="Twitter" border="0" class="CToWUd">
-          </a>
+          <tr>
+            <td style="padding:5px 5px 5px 0">
+              <img
+                style="display:block;width: 15px;height:15px"
+                src="https://3.bp.blogspot.com/-arLS2tsOJ4g/XKHDIOhsjPI/AAAAAAAACSE/W_eQzaca_2UA39JiyL_N2BBbA0U-YDa0ACLcBGAs/s1600/iconfinder_03-twitter_104501.png"
+                alt="Twitter" class="CToWUd">
+              </td>
+            <td>
+              <a
+                style="color:#19312E;text-decoration:none"
+                href="https://twitter.com/${field.value}?utm_source=email&utm_medium=footer"
+                title="Twitter" target="_blank">
+                ${field.value}
+              </a>
+            </td>
+          </tr>
+        `;
+      case 'facebook':
+        return `
+          <tr>
+            <td style="padding:5px 5px 5px 0">
+              <img
+                style="display:block;width: 20px;height:20px"
+                src="https://2.bp.blogspot.com/-pSboy72AufM/XKHDI9fdHuI/AAAAAAAACSM/CeBJPgn2mwASUGRaCx2HlP6pUhgpvsbWwCLcBGAs/s1600/iconfinder_social-facebook_216078.png"
+                alt="Facebook" class="CToWUd">
+              </td>
+            <td>
+              <a
+                style="color:#19312E;text-decoration:none"
+                href="https://facebook.com/${field.value}?utm_source=email&utm_medium=footer"
+                title="Facebook" target="_blank">
+                ${field.value}
+              </a>
+            </td>
+          </tr>
         `;
       case 'instagram':
         return `
-          <a href="https://www.instagram.com/${field.value}" title="Instagram" target="_blank">
-            <img
-              style="width: 18px;height:18px"
-              src="https://4.bp.blogspot.com/-tS3EcPHjsD4/XKGP7NmOa7I/AAAAAAAACQI/gs8UPupskwgsG4i3EY-V-ITGWO9UiJt-QCLcBGAs/s1600/iconfinder_38-instagram_1161953.png"
-              alt="Instagram" border="0" class="CToWUd">
-          </a>
+          <tr>
+            <td style="padding:5px 5px 5px 0">
+              <img
+                style="display:block;width: 15px;height:15px"
+                src="https://2.bp.blogspot.com/-ox4DArvNyew/XKHDII3r7sI/AAAAAAAACSA/s0m6QrOGlconYGhHAPJbaJA-EqgO7RAEwCLcBGAs/s1600/iconfinder_38-instagram_104466.png"
+                alt="Instagram" class="CToWUd">
+              </td>
+            <td>
+              <a
+                style="color:#19312E;text-decoration:none"
+                href="https://instagram.com/${field.value}?utm_source=email&utm_medium=footer"
+                title="Instagram" target="_blank">
+                ${field.value}
+              </a>
+            </td>
+          </tr>
         `;
       case 'linkedin':
         return `
-          <a href="${field.value}" title="Linkedin" target="_blank">
-            <img
-              style="width: 18px;height:18px"
-              src="https://3.bp.blogspot.com/-TyYSCRjQYyo/XKGP7vSJEqI/AAAAAAAACQM/HRiLdx4lY_YDZ5c8Abj2saN-KDwNiJolQCLcBGAs/s1600/iconfinder_LinkedIn_194920.png"
-              alt="Linkedin" border="0" class="CToWUd">
-          </a>
+          <tr>
+            <td style="padding:5px 5px 5px 0">
+              <img
+                style="display:block;width: 18px;height:18px"
+                src="https://4.bp.blogspot.com/-nK5S81yh-ao/XKHDIJ57SPI/AAAAAAAACSI/hiWUFrNHug4p9FTvO3xs3d5IUK70gTBSgCLcBGAs/s1600/iconfinder_linkedin_circle_black_107159.png"
+                alt="Linkedin" class="CToWUd">
+              </td>
+            <td>
+              <a
+                style="color:#19312E;text-decoration:none"
+                href="${field.value}?utm_source=email&utm_medium=footer"
+                title="Linkedin" target="_blank">
+                ${field.value}
+              </a>
+            </td>
+          </tr>
         `;
       default:
         return '';
@@ -168,7 +200,7 @@ function generateSignature({
   });
 
   return `
-    <table style="width:100%;color:#666" cellspacing="0" cellpadding="0">
+    <table style="width:100%;color:#666;" cellspacing="0" cellpadding="0">
       <tbody>
         <tr>
           <td style="font-size:16px;font-weight:bold;color:#0FA79E">${name}</td>
@@ -216,7 +248,7 @@ function generateSignature({
                             </a>
                           </td>
                         </tr>
-                        ${nonSocialComposed && nonSocialComposed.length && nonSocialComposed.join('') || ''}
+                        ${customFieldComposed && customFieldComposed.length && customFieldComposed.join('') || ''}
                       </tbody>
                     </table>
                   </td>
@@ -242,16 +274,39 @@ function generateSignature({
         </tr>
         <tr>
           <td>
-            <table style="width:100%;font-family:Arial,Helvetica,sans-serif;font-size:13px" cellspacing="0"
+            <table style="width:100%;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-bottom: 3px solid #1e3433;" cellspacing="0"
               cellpadding="0">
               <tbody>
-                <tr>
-                  <td style="width:50%;padding:6px 0 5px 7px;background-color:#0FA79E;color:#ffffff">
+                <tr style="background-color:#0FA79E;border:3px solid #19312F;">
+                  <td style="width:50%;padding:8px;color:#ffffff;">
                     ${companyAddress || 'Jl. Pakuningratan No.15, Yogyakarta 55233'}
                   </td>
                   <td
-                    style="padding:5px 7px 2px;background-color:#19312F;text-align:right;vertical-align:middle">
-                    ${socialComposed && socialComposed.length && socialComposed.join('') || ''}
+                    style="padding:8px;text-align:right;vertical-align:middle">
+                    <a style="text-decoration: none" href="https://www.linkedin.com/company/softwareseni?utm_source=email&utm_medium=footer" title="Linkedin" target="_blank">
+                      <img
+                        style="width: 20px;height:20px"
+                        src="https://3.bp.blogspot.com/-TyYSCRjQYyo/XKGP7vSJEqI/AAAAAAAACQM/HRiLdx4lY_YDZ5c8Abj2saN-KDwNiJolQCLcBGAs/s1600/iconfinder_LinkedIn_194920.png"
+                        alt="Linkedin" border="0" class="CToWUd">
+                    </a>
+                    <a style="text-decoration: none" href="https://www.facebook.com/softwareseni.co.id?utm_source=email&utm_medium=footer" title="Facebook" target="_blank">
+                      <img
+                        style="width: 20px;height:20px"
+                        src="https://1.bp.blogspot.com/-C_eLsPTlogk/XKGP69tu8lI/AAAAAAAACQE/DTBsCNF9QDkeJNIkA6al-xC_mOUKzjePQCLcBGAs/s1600/iconfinder_Facebook_194929.png"
+                        alt="Facebook" border="0" class="CToWUd">
+                    </a>
+                    <a style="text-decoration: none" href="https://www.instagram.com/softwareseni_id?utm_source=email&utm_medium=footer" title="Instagram" target="_blank">
+                      <img
+                        style="width: 20px;height:20px"
+                        src="https://4.bp.blogspot.com/-tS3EcPHjsD4/XKGP7NmOa7I/AAAAAAAACQI/gs8UPupskwgsG4i3EY-V-ITGWO9UiJt-QCLcBGAs/s1600/iconfinder_38-instagram_1161953.png"
+                        alt="Instagram" border="0" class="CToWUd">
+                    </a>
+                    <a style="text-decoration: none" href="https://twitter.com/softwareseni?utm_source=email&utm_medium=footer" title="Twitter" target="_blank">
+                      <img
+                        style="width: 20px;height:20px"
+                        src="https://4.bp.blogspot.com/-DVL7CpOjP9U/XKGP8LHH9ZI/AAAAAAAACQU/XFK4tTKzRbE_piOv8dyOoilgRkCHeRktgCLcBGAs/s1600/iconfinder_Twitter_194909.png"
+                        alt="Twitter" border="0" class="CToWUd">
+                    </a>
                   </td>
                 </tr>
               </tbody>
