@@ -200,7 +200,7 @@ function generateSignature({
   });
 
   return `
-    <table style="width:100%;color:#666;" cellspacing="0" cellpadding="0">
+    <table width="100%" style="max-width:100%; min-width:100%; width:100%;color:#666;" cellspacing="0" cellpadding="0">
       <tbody>
         <tr>
           <td style="font-size:16px;font-weight:bold;color:#0FA79E">${name}</td>
@@ -210,7 +210,7 @@ function generateSignature({
         </tr>
         <tr>
           <td style="padding:7px 0 10px;border-top:1px solid #eaeaea">
-            <table style="width:100%" cellspacing="0" cellpadding="0">
+            <table width="100%" style="max-width:100%; min-width:100%; width:100%;" cellspacing="0" cellpadding="0">
               <tbody>
                 <tr>
                   <td style="width:70%;padding-top:2px">
@@ -253,7 +253,7 @@ function generateSignature({
                     </table>
                   </td>
                   <td style="width:30%;padding-top:5px;vertical-align: bottom;">
-                    <table style="width:100%;text-align:right" cellspacing="0" cellpadding="0">
+                    <table width="100%" style="max-width:100%; min-width:100%; width:100%; text-align:right" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
                           <td>
@@ -274,7 +274,7 @@ function generateSignature({
         </tr>
         <tr>
           <td>
-            <table style="width:100%;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-bottom: 3px solid #1e3433;" cellspacing="0"
+            <table width="100%" style="max-width:100%; min-width:100%; width:100%;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-bottom: 3px solid #1e3433;" cellspacing="0"
               cellpadding="0">
               <tbody>
                 <tr style="background-color:#0FA79E;border:3px solid #19312F;">
